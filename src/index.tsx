@@ -20,3 +20,9 @@ const ImagePalette = NativeModules.ImagePalette
 export function multiply(a: number, b: number): Promise<number> {
   return ImagePalette.multiply(a, b);
 }
+
+export function getColors(imageUri: string): Promise<any> {
+  return ImagePalette.getColors(imageUri, {
+    quality: 'high',
+  });
+}
